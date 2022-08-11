@@ -1,8 +1,9 @@
 # Project
 Together or together? For that is the question
 ### https://ms13380.github.io/PollTogether/
-
-# 13 Object-Relational Mapping (ORM): E-Commerce Back End
+=======
+Heroku: https://poll-together.herokuapp.com/
+## Made by the Polars
 
 ## User Story
 
