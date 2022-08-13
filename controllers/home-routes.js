@@ -4,7 +4,7 @@ const { Poll, User, Answer } = require('../models');
 router.get('/', async (req, res) => {
     try {
       const pollData = await Poll.findAll({
-          attributes: ['id', 'title', 'description', 'options', 'user_id', 'created_at'],
+          attributes: ['id', 'poll_title', 'poll_desc', 'poll_options', 'poll_userID', 'created_at'],
           include: [
               {
                   model: Answer,
