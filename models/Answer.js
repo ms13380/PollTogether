@@ -7,11 +7,13 @@ Answer.init(
     {
         poll_id: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            primaryKey: true
         },
         user_id: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            primaryKey: true
         },
         option: {
             type: DataTypes.STRING,
