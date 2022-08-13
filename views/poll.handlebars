@@ -1,0 +1,4 @@
+Poll: {{poll.poll_title}} - Made by: {{poll.user.username}}<br>
+{{#each poll.poll_options as |option|}}
+    {{option.name}}: {{option.count}} votes<br>
+{{/each}}

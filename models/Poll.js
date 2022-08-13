@@ -32,7 +32,7 @@ Polls.init(
         allowNull: false
     },
 
-    poll_userID: {
+    user_id: {
         type: DataTypes.INTEGER,
         allowNull: false
     }
