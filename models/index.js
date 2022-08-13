@@ -14,4 +14,4 @@ Answer.belongsTo(User, {foreignKey: 'user_id'});
   
 Answer.belongsTo(Poll, {foreignKey: 'post_id'});
 
-module.exports = {User, Poll, Comment};
+module.exports = {User, Poll, Answer};
