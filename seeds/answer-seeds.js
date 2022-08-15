@@ -142,7 +142,59 @@ const pollData = [
     user_id: 11,
     option: "30-39"
   },
+
+  ////////////////////////////
   
+  {
+    poll_id: "T4JG51",
+    user_id: 1,
+    option: "Yes"
+  },
+  {
+    poll_id: "T4JG51",
+    user_id: 2,
+    option: "Yes"
+  },
+  {
+    poll_id: "T4JG51",
+    user_id: 3,
+    option: "Yes"
+  },
+  {
+    poll_id: "T4JG51",
+    user_id: 5,
+    option: "No"
+  },
+  {
+    poll_id: "T4JG51",
+    user_id: 6,
+    option: "Yes"
+  },
+  {
+    poll_id: "T4JG51",
+    user_id: 7,
+    option: "Yes"
+  },
+  {
+    poll_id: "T4JG51",
+    user_id: 8,
+    option: "No"
+  },
+  {
+    poll_id: "T4JG51",
+    user_id: 9,
+    option: "Yes"
+  },
+  {
+    poll_id: "T4JG51",
+    user_id: 10,
+    option: "Yes"
+  },
+  {
+    poll_id: "T4JG51",
+    user_id: 11,
+    option: "Yes"
+  }
 ];
 
 const seedAnswer = () => Answer.bulkCreate(pollData);

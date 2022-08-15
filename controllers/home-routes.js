@@ -26,8 +26,6 @@ router.get('/', async (req, res) => {
         post.get({ plain: true })
       );
 
-      // const session_user_id = req.session.user_id;
-      // const data = {session_user_id, polls};
       res.render('homepage', {polls, logged_in: req.session.loggedIn, session_user_id: req.session_user_id});
     } catch (err) {
       console.log(err);
@@ -63,6 +61,12 @@ router.get('/poll/:id', async (req, res) => {
     for (let i = 0; i < poll.answers.length; i++) {
       poll.poll_options.find(e => e.name === poll.answers[i].option).count++;
     }
+    // let stringified_options = [];
+    // for (let option of poll.poll_options) {
+    //   stringified_options.push(`${option.name}:${option.count}`);
+    // }
+    // poll.poll_options = stringified_options;
+
     res.render('poll', {poll, logged_in: req.session.loggedIn, session_user_id: req.session_user_id})
   } catch (err) {
     console.log(err);
