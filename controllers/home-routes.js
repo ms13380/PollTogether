@@ -1,6 +1,22 @@
 const router = require('express').Router();
 const { Poll, User, Answer } = require('../models');
 
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  res.render('login');
+});
+
+router.get('/register', (req, res) => {
+  if (req.session.loggedOut) {
+    res.redirect('/');
+    return;
+  }
+  res.render('register');
+});
+
 router.get('/', async (req, res) => {
     try {
       const pollData = await Poll.findAll({
