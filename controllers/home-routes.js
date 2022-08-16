@@ -42,9 +42,7 @@ router.get('/', async (req, res) => {
         post.get({ plain: true })
       );
 
-      // const session_user_id = req.session.user_id;
-      // const data = {session_user_id, polls};
-      res.render('homepage', {polls, logged_in: req.session.loggedIn, session_user_id: req.session_user_id});
+      res.render('homepage', {polls, loggedIn: req.session.loggedIn, session_user_id: req.session_user_id});
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
@@ -58,6 +56,7 @@ router.get('/poll/:id', async (req, res) => {
       include: [
         {
           model: Answer,
+          required: false,
           where: { poll_id: req.params.id},
           attributes: ['poll_id', 'user_id', 'option'],
           include: [
@@ -79,10 +78,19 @@ router.get('/poll/:id', async (req, res) => {
     for (let i = 0; i < poll.answers.length; i++) {
       poll.poll_options.find(e => e.name === poll.answers[i].option).count++;
     }
-    res.render('poll', {poll, logged_in: req.session.loggedIn, session_user_id: req.session_user_id})
+
+    res.render('poll', {poll, loggedIn: req.session.loggedIn, session_user_id: req.session_user_id})
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
+  }
+});
+
+router.get('/create', async (req, res) => {
+  try {
+      res.render('create-poll', {loggedIn: req.session.loggedIn});
+  } catch (err) {
+      res.status(500).json(err);
   }
 });
 

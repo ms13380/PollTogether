@@ -21,6 +21,13 @@ const pollData = [
     poll_desc: "",
     poll_options: `{"options": ["<13", "13-19", "20-29", "30-39", "40-49", "50-59", "60-69", "70+"]}`,
     user_id: 3
+  },
+  {
+    id: 'T4JG51',
+    poll_title: 'Will the Braves win the World Series this year?',
+    poll_desc: "",
+    poll_options: `{"options": ["Yes", "No"]}`,
+    user_id: 4
   }
 ];
 

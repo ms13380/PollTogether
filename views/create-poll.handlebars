@@ -1,0 +1,28 @@
+<section>
+    <header>
+        <h2>Create Poll</h2>
+    </header>
+    <section class="create-poll">
+        <form id="create-form">
+            <section>
+                <input name="poll-title" placeholder="Title" required />
+            </section>
+            <section>
+                <textarea name="poll-desc" placeholder="Description"></textarea>
+            </section>
+            <section>
+                <a href="#" id="add-option">Add option</a>
+            </section>
+            <section id="poll-options">
+                Answer choices:
+                <input style="display: block;" class="poll-option" required />
+                <input style="display: block;" class="poll-option" required />
+            </section>
+            <section>
+                <button type="submit" id="submit-post">Create</button>
+            </section>
+        </form>
+    </section>
+</section>
+
+<script src="/js/create-poll.js"></script>
