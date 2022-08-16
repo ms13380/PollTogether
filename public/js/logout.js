@@ -1,8 +1,3 @@
-// KEY VARIABLE NAMES
-// #logout (line 19) to reference the logout element
-// 'click' (line 19) for the button to initiate the login scripting
-
-
 const logout = async () => {
     const response = await fetch('/api/users/logout', {
       method: 'POST',
@@ -10,7 +5,7 @@ const logout = async () => {
     });      
   
     if (response.ok) {
-      document.location.replace('/login');
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
