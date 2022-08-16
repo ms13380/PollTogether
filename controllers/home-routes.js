@@ -61,16 +61,19 @@ router.get('/poll/:id', async (req, res) => {
     for (let i = 0; i < poll.answers.length; i++) {
       poll.poll_options.find(e => e.name === poll.answers[i].option).count++;
     }
-    // let stringified_options = [];
-    // for (let option of poll.poll_options) {
-    //   stringified_options.push(`${option.name}:${option.count}`);
-    // }
-    // poll.poll_options = stringified_options;
 
     res.render('poll', {poll, logged_in: req.session.loggedIn, session_user_id: req.session_user_id})
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
+  }
+});
+
+router.get('/create', async (req, res) => {
+  try {
+      res.render('create-poll', {loggedIn: req.session.loggedIn});
+  } catch (err) {
+      res.status(500).json(err);
   }
 });
 
