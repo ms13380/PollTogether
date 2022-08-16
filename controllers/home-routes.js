@@ -35,7 +35,8 @@ router.get('/', async (req, res) => {
                   attributes: ['username']
               }
           ],
-          order: [['created_at', 'DESC']]
+          order: [['created_at', 'DESC']],
+          limit: 5
       });
   
       let polls = pollData.map((post) =>

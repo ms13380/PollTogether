@@ -10,7 +10,7 @@ Heroku: https://poll-together.herokuapp.com/
 ```md
 AS A bootcam teacher
 I WANT to be able to get input from my students
-SO THAT make sure that everyone understands and is participating
+SO THAT I can make sure that everyone understands and is participating
 ```
 
 ## Acceptance Criteria
