@@ -17,7 +17,11 @@ Answer.init(
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            primaryKey: true
+            // primaryKey: true
+            references: {
+                model: 'user',
+                key: 'id'
+            }
         },
         option: {
             type: DataTypes.STRING,
