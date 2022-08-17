@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Poll, Answer } = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
@@ -70,6 +70,20 @@ router.post('/', async (req, res) => {
       res.status(404).end();
     }
   });
+   
+
+  // GET all users with their polls and answers
+router.get('/', async (req, res) => {
+  try {
+    const userData = await User.findAll({
+      include: [{ model: Poll }, { model: Answer }],
+    });
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
   module.exports = router;
   
