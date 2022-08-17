@@ -7,7 +7,7 @@ router.post('/', withAuth, async (req, res) => {
         const data = await Poll.create({
             id: req.body.poll_id,
             poll_title: req.body.poll_title,
-            poll_desc: req.body.poll_content,
+            poll_desc: req.body.poll_desc,
             poll_options: req.body.poll_options,
             user_id: req.session.user_id
         });

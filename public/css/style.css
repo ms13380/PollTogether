@@ -1,3 +1,39 @@
+.poll-card {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 600px;
+  margin: 10px auto;
+  /* padding: 10px; */
+}
+
+.poll-card-desc a:link, .poll-card-desc a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.poll-card-desc {
+  padding: 10px;
+}
+
+.poll-card-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #b2e7d1;
+  color: black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.poll-card-header a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
 .navbar-no-shadow-container {
   z-index: 5;
   width: 100%;
