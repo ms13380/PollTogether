@@ -17,6 +17,7 @@ const pollFormHandler = async (event) => {
   
     const poll_title = document.querySelector('input[name="poll-title"]').value.trim();
     const poll_desc = document.querySelector('textarea[name="poll-desc"]').value.trim();
+    const poll_expire = document.querySelector('input[name="poll-exp"]').value.trim();
 
     const optionsSection = $('#poll-options');
 
@@ -29,7 +30,7 @@ const pollFormHandler = async (event) => {
     if (poll_title) {
       const response = await fetch('/api/polls', {
         method: 'POST',
-        body: JSON.stringify({ poll_id: poll_id, poll_title: poll_title, poll_desc: poll_desc, poll_options: poll_options }),
+        body: JSON.stringify({ poll_id: poll_id, poll_expire: poll_expire, poll_title: poll_title, poll_desc: poll_desc, poll_options: poll_options }),
         headers: { 'Content-Type': 'application/json' },
       });
   

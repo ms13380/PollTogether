@@ -9,7 +9,8 @@ router.post('/', withAuth, async (req, res) => {
             poll_title: req.body.poll_title,
             poll_desc: req.body.poll_desc,
             poll_options: req.body.poll_options,
-            user_id: req.session.user_id
+            user_id: req.session.user_id,
+            poll_expire: req.body.poll_expire
         });
         res.status(200).json(data);
     } catch (err) {
