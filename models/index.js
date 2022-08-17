@@ -2,9 +2,17 @@ const User = require('./User');
 const Poll = require('./Poll');
 const Answer = require('./Answer');
 
-User.hasMany(Poll, {foreignKey: 'user_id'});
+//A user might have many polls but when deleted then his polls are deleted as well
+User.hasMany(Poll, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE',
+});
 
-User.hasMany(Answer, {foreignKey: 'user_id'});
+//A user might have many answers but when deleted then his answers are deleted as well
+User.hasMany(Answer, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE',
+});
   
 Poll.hasMany(Answer, {foreignKey: 'poll_id'});
 
