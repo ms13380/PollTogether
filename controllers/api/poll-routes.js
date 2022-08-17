@@ -9,7 +9,8 @@ router.post('/', withAuth, async (req, res) => {
             poll_title: req.body.poll_title,
             poll_desc: req.body.poll_desc,
             poll_options: req.body.poll_options,
-            user_id: req.session.user_id
+            user_id: req.session.user_id,
+            poll_expire: req.body.poll_expire
         });
         res.status(200).json(data);
     } catch (err) {
@@ -54,16 +55,35 @@ router.delete('/:id', withAuth, async (req, res) => {
     }
 });
 
+
+  // GET all the polls with their pollars and answer
+  router.get('/', async (req, res) => {
+    try {
+      const pollData = await Poll.findAll({
+        include: [{ model: User }, { model: Answer }],
+      });
+      res.status(200).json(pollData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+  
+
+
+//Get a poll with the pollar and his answer
 router.get('/:id', async (req, res) => {
     try {
       const pollData = await Poll.findByPk(req.params.id, {
+        include: [{ model: User }, { model: Answer }],
         attributes: ['id'],
       });
-      if (pollData) {
-        res.status(200).json(pollData);
-      } else {
-        res.status(404).json(pollData);
-      }
+
+      if (!pollData) {
+        res.status(404).json({message: 'No poll with this ID'});
+        return;
+      } 
+
+      res.status(200).json(pollData);
     } catch (err) {
         res.status(500).json(err);
     }
