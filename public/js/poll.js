@@ -29,6 +29,6 @@ for (let option of pollValues) {
   };
 
   const myChart = new Chart(
-    document.getElementById('test-chart'),
+    document.getElementById('chart'),
     config
   );
