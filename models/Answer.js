@@ -8,7 +8,11 @@ Answer.init(
         poll_id: {
             type: DataTypes.STRING,
             allowNull: false,
-            primaryKey: true
+            // primaryKey: true
+            references: {
+                model: 'polls',
+                key: 'id'
+            }
         },
         user_id: {
             type: DataTypes.INTEGER,
