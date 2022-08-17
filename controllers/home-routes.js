@@ -43,6 +43,14 @@ router.get('/', async (req, res) => {
         post.get({ plain: true })
       );
 
+      for(let poll of polls) {
+        poll.poll_options = JSON.parse(poll.poll_options);
+        poll.poll_options = poll.poll_options.options.map((o) => JSON.parse(`{"name": "${o}","count": 0}`));
+        for (let i = 0; i < poll.answers.length; i++) {
+          poll.poll_options.find(e => e.name === poll.answers[i].option).count++;
+        }
+      }
+
       res.render('homepage', {polls, loggedIn: req.session.loggedIn, session_user_id: req.session_user_id});
     } catch (err) {
       console.log(err);

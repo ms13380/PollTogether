@@ -1,7 +1,9 @@
 <section>
 <h1>Poll: {{poll.poll_title}} - Made by: {{poll.user.username}}</h1>
-<h2>Share code: {{poll.id}}</h2>>
-
+<h2>Share code: {{poll.id}}</h2>
+<section>
+    {{poll.poll_desc}}
+</section>
 
 <div style="width:50%; margin:0px auto">
     <input type="hidden" name="poll-title" value="{{poll.poll_title}}" />
@@ -10,7 +12,7 @@
 {{option.name}}:{{option.count}}
         {{/each}}
     </textarea>
-    <canvas id="test-chart"></canvas>
+    <canvas id="chart"></canvas>
 </div>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

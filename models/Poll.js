@@ -39,7 +39,12 @@ Polls.init(
           model: 'user',
           key: 'id'
         }
-    }
+    },
+    
+    poll_expire: {
+      type: DataTypes.DATE,
+      allowNull: true
+   }
     
   },
   {
