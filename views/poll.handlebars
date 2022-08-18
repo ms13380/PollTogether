@@ -1,7 +1,9 @@
 <section>
 <h1>Poll: {{poll.poll_title}} - Made by: {{poll.user.username}}</h1>
 <h2>Share code: {{poll.id}}</h2>
-<h3>Ends at: {{format_date poll.poll_expire}}</h3>
+{{#if poll.poll_expire}}
+    <h3>Ends at: {{format_date poll.poll_expire}}</h3>
+{{/if}}
 <section>
     {{poll.poll_desc}}
 </section>
