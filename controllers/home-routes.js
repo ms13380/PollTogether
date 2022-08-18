@@ -61,12 +61,12 @@ router.get('/', async (req, res) => {
 router.get('/poll/:id', async (req, res) => {
   try {
     const pollData = await Poll.findByPk(req.params.id, {
-      attributes: ['id', 'poll_title', 'poll_desc', 'poll_options', 'user_id', 'created_at'],
+      attributes: ['id', 'poll_title', 'poll_desc', 'poll_options', 'user_id', 'poll_expire', 'created_at'],
       include: [
         {
           model: Answer,
           required: false,
-          where: { poll_id: req.params.id},
+          where: { poll_id: req.params.id },
           attributes: ['poll_id', 'user_id', 'option'],
           include: [
             {
@@ -88,7 +88,24 @@ router.get('/poll/:id', async (req, res) => {
       poll.poll_options.find(e => e.name === poll.answers[i].option).count++;
     }
 
-    res.render('poll', {poll, loggedIn: req.session.loggedIn, session_user_id: req.session_user_id})
+    let userCanVote = false;
+    if (req.session.loggedIn) {
+      const expiration = poll.poll_expire ? new Date(new Date(poll.poll_expire).toUTCString()) : null;
+      const today = new Date(new Date().toUTCString());
+      if(expiration == null || expiration > today) {
+        const voteExists = await Answer.findOne({
+          where: {
+            poll_id: poll.id,
+            user_id: req.session.user_id
+          }
+        });
+        if (voteExists == null) {
+          userCanVote = true;
+        }
+      }
+    }
+
+    res.render('poll', {poll, loggedIn: req.session.loggedIn, userCanVote: userCanVote, session_user_id: req.session_user_id})
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
