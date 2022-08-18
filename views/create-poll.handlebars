@@ -10,12 +10,15 @@
             <section>
                 <textarea name="poll-desc" placeholder="Description"></textarea>
             </section>
+            <div>
+                Poll expiration:
+                <input type="datetime-local" name="poll-exp">
+            </div>
             <section>
                 <a href="#" id="add-option">Add option</a>
             </section>
             <section id="poll-options">
                 Answer choices:
-                <div><input type="date" name="poll-exp"></div>
                 <div><input style="display: block;" class="poll-option" required /></div>
                 <div><input style="display: block;" class="poll-option" required /></div>
             </section>

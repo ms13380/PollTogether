@@ -20,6 +20,11 @@ const pollFormHandler = async (event) => {
     let poll_expire = document.querySelector('input[name="poll-exp"]').value.trim();
     if (poll_expire == '') {
       poll_expire = null;
+    } else {
+      poll_expire = new Date(poll_expire);
+      // poll_expire = Date.UTC(poll_expire.getUTCFullYear(), poll_expire.getUTCMonth(), poll_expire.getUTCDate(), poll_expire.getUTCHours(),
+      //   poll_expire.getUTCMinutes(), poll_expire.getUTCSeconds());
+      poll_expire = poll_expire.toUTCString();
     }
 
     const optionsSection = $('#poll-options');

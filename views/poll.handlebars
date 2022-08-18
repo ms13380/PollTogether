@@ -1,20 +1,19 @@
 <section>
 <h1>Poll: {{poll.poll_title}} - Made by: {{poll.user.username}}</h1>
 <h2>Share code: {{poll.id}}</h2>
+<h3>Ends at: {{format_date poll.poll_expire}}</h3>
 <section>
     {{poll.poll_desc}}
 </section>
 
+{{#if userCanVote}}
 <div>
-    {{!-- <form id="poll-vote"> --}}
     {{#each poll.poll_options as |option|}}
         <input type="radio" name="vote" value="{{option.name}}" /> {{option.name}}<br>
     {{/each}}
-    {{!-- </form> --}}
-    {{!-- <input type="submit" value="Vote" class="w-button"> --}}
     <button id="vote">Vote</button>
-    
 </div>
+{{/if}}
 
 <div style="width:50%; margin:0px auto">
     <input type="hidden" name="poll-id" value="{{poll.id}}" />

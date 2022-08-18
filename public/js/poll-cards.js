@@ -33,8 +33,6 @@ for (let i = 0; i < pollTitles.length; i++) {
     data: data,
     options: {
       indexAxis: 'y',
-      // categoryThickness: 40,
-      // barThickness: 30,
       responsive: true,
       plugins: {
         legend: {display: false},
