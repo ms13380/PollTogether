@@ -17,12 +17,14 @@
 {{user_name}}'s Polls
 
 {{#each polls as |poll|}}
-    {{> poll-card poll}}
+    {{> dash-poll-card poll}}
 {{/each}}
 
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="/js/poll-cards.js"></script>
+<script src="/js/edit-poll.js"></script>
+
 
 </html>
