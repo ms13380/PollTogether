@@ -17,7 +17,10 @@ const pollFormHandler = async (event) => {
   
     const poll_title = document.querySelector('input[name="poll-title"]').value.trim();
     const poll_desc = document.querySelector('textarea[name="poll-desc"]').value.trim();
-    const poll_expire = document.querySelector('input[name="poll-exp"]').value.trim();
+    let poll_expire = document.querySelector('input[name="poll-exp"]').value.trim();
+    if (poll_expire == '') {
+      poll_expire = null;
+    }
 
     const optionsSection = $('#poll-options');
 
