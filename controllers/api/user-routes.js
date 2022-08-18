@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Poll, Answer } = require('../../models');
+const { User } = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
@@ -70,36 +70,6 @@ router.post('/', async (req, res) => {
       res.status(404).end();
     }
   });
-   
-  // GET all users with their polls and answers
-router.get('/', async (req, res) => {
-  try {
-    const userData = await User.findAll({
-      include: [{ model: Poll }, { model: Answer }],
-    });
-    res.status(200).json(userData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-// GET a single user
-router.get('/:id', async (req, res) => {
-  try {
-    const userData = await User.findByPk(req.params.id, {
-      include: [{ model: Poll }, { model: Answer }],
-    });
-
-    if (!userData) {
-      res.status(404).json({ message: 'No user found with that id!' });
-      return;
-    }
-
-    res.status(200).json(userData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 
   module.exports = router;
   
