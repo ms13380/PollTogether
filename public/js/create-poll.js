@@ -50,6 +50,14 @@ const pollFormHandler = async (event) => {
 
 const addOptionToPoll = async (event) => {
     let optionsSection = $('#poll-options');
+
+    let existingOptionCount = document.querySelector('#poll-options').querySelectorAll('li').length;
+
+    if (existingOptionCount >= 9) {
+      let addLink = $('#add-option');
+      addLink.addClass('hidden');
+    }
+
     let newRow = $('<li>');
     newRow.attr('class', 'list-group-item d-flex justify-content-between lh-condensed p-0 align-middle');
     let newOption = $('<input>');
@@ -61,7 +69,7 @@ const addOptionToPoll = async (event) => {
     let removeOptionLink = $('<a>');
     removeOptionLink.attr('href', '#');
     removeOptionLink.attr('class', 'remove-option');
-    removeOptionLink.text('remove');
+    removeOptionLink.text('Remove');
     newRow.append(removeOptionLink);
 
     optionsSection.append(newRow);
@@ -71,6 +79,8 @@ const removeOptionFromPoll = async (event) => {
   if (event.target.className === 'remove-option') {
     let optionList = event.target.parentNode.parentNode;
   optionList.removeChild(event.target.parentNode);
+  let addLink = $('#add-option');
+  addLink.removeClass('hidden');
   }
 }
 

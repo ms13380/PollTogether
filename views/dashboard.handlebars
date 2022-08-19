@@ -1,8 +1,12 @@
 <div class="container">
   <div class="row" id="cardEvent">
-    {{#each polls as |poll|}}
-        {{> dash-poll-card poll}}
-    {{/each}}
+    {{#if polls}}
+      {{#each polls as |poll|}}
+          {{> dash-poll-card poll}}
+      {{/each}}
+    {{else}}
+      <p>Your polls will appear here.</p>
+    {{/if}}
   </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

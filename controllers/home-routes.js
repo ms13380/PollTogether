@@ -84,7 +84,7 @@ router.get('/poll/:id', async (req, res) => {
     });
     let poll = pollData.get({ plain: true });
     poll.poll_options = JSON.parse(poll.poll_options);
-    poll.poll_options = poll.poll_options.options.map((o) => JSON.parse(`{"name": "${o}","count": 0}`));
+    poll.poll_options = poll.poll_options.options.map((option, index) => JSON.parse(`{"name": "${option}","count": 0, "index": ${index}}`));
     for (let i = 0; i < poll.answers.length; i++) {
       poll.poll_options.find(e => e.name === poll.answers[i].option).count++;
     }

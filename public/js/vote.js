@@ -21,4 +21,19 @@ const vote = async (event) => {
     }
 };
 
-document.querySelector('#vote').addEventListener('click', vote);
+document.querySelector('#vote-button').addEventListener('click', vote);
+
+var radios = document.forms["vote-form"].elements["vote"];
+for(let radio in radios) {
+  radios[radio].onclick = function(event) {
+      let previousSelection = document.querySelector('.radio-checked');
+      if (previousSelection) {
+        previousSelection.classList.remove('radio-checked');
+      }
+      let newSelection = event.target.closest('li');
+      if (newSelection.classList.contains('radio-unchecked')) {
+        newSelection.classList.remove('radio-unchecked');
+      }
+      newSelection.classList.add('radio-checked')
+  }
+}
