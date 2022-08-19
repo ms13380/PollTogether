@@ -8,6 +8,7 @@ const pollEdit = async (event) => {
       let textField = $("<textarea>");
       textField.attr('class', 'w-100');
       textField.attr('style', 'height: 160px');
+      textField.attr('maxlength', '65535');
       let parentDiv = edit.closest('div');
       let spanEl = parentDiv.childNodes[1];
       let aEl = parentDiv.childNodes[3];
@@ -32,7 +33,7 @@ const pollEdit = async (event) => {
       let parentDiv = edit.closest('div');
       let textAreaEl = parentDiv.childNodes[0];
       let descText = textAreaEl.value.trim();
-      const pollID = document.querySelector('input[name="poll-id"]').value;
+      const pollID = parentDiv.querySelector('input[name="poll-id"]').value;
       const response = await fetch(`/api/polls/${pollID}`, {
         method: 'PUT',
         body: JSON.stringify({ id: pollID, poll_desc: descText }),

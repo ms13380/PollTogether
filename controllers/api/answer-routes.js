@@ -8,7 +8,7 @@ router.post('/', withAuth, async (req, res) => {
         });
         const expiration = poll.poll_expire ? new Date(new Date(poll.poll_expire).toUTCString()) : null;
         const today = new Date(new Date().toUTCString());
-        if (expiration && expiration > today) {
+        if (expiration && expiration < today) {
             throw 'Poll expired.';
         }
         const data = await Answer.create({
