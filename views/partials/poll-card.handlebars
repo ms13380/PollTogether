@@ -5,7 +5,7 @@
             <div>by <a href="#">{{user.username}}</a></div> {{!-- Need user profile link here --}}
         </header>
         <section class="poll-card-desc">
-            <a href="/poll/{{id}}">
+            
                 <div>
                     {{poll_desc}}
                     <canvas id="chart-{{id}}"></canvas>
@@ -18,9 +18,9 @@
                             {{/each}}
                         </textarea>
                     </div>
-                    <span class="blue-link">Click here to vote!</span>
+                    <a href="/poll/{{id}}">Click here to vote!</a>
                 </div>
-            </a>
+            
         </section>
 
     </div>

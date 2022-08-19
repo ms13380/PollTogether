@@ -1,33 +1,63 @@
 <section>
-<h1>Poll: {{poll.poll_title}} - Made by: {{poll.user.username}}</h1>
-<h2>Share code: {{poll.id}}</h2>
-{{#if poll.poll_expire}}
-    <h3>Ends at: {{format_date poll.poll_expire}}</h3>
-{{/if}}
-<section>
-    {{poll.poll_desc}}
-</section>
+    <div class="px-3 pt-md-2 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">{{poll.poll_title}}</h1>
+        <h2>By {{poll.user.username}}</h2>
+        {{#if poll.poll_expire}}
+            <h3>Ends at: {{format_date poll.poll_expire}}</h3>
+        {{/if}}
+        <div class="lead d-flex justify-content-center"><p style="width: 500px; position:relative">Share code:
+            <input disabled value="{{poll.id}}" id="share-code"/><button id="copy-code" class="btn btn-primary copy-button">&#10064;</button>
+            <span id="inform-copy" class="lead hidden" style="position:absolute; left:430px; top:10px">Copied!</span></p>
+        </div>
+        <section class="lead px-4">
+            {{poll.poll_desc}}
+        </section>
+    </div>
 
-{{#if userCanVote}}
-<div>
-    {{#each poll.poll_options as |option|}}
-        <input type="radio" name="vote" value="{{option.name}}" /> {{option.name}}<br>
-    {{/each}}
-    <button id="vote">Vote</button>
-</div>
-{{/if}}
+    {{#if userCanVote}}
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-4 order-md-2 mb-4">
+                    <input type="hidden" name="poll-id" value="{{poll.id}}" />
+                    <form id="vote-form">
+                        <ul id="options-wrapper" class="list-group mb-3">
+                            {{#each poll.poll_options as |option|}}
+                                <label for="option-{{option.index}}">
+                                    <li class="list-group-item d-flex justify-content-start lh-condensed radio-wrapper radio-unchecked">
+                                        <input type="radio" id="option-{{option.index}}" name="vote" value="{{option.name}}" style="display:none" />{{option.name}}
+                                    </li>
+                                </label>
+                                
+                            {{/each}}
+                            <button id="vote-button" class="btn btn-secondary mt-2">Vote</button>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    {{else}}
+        <div class="d-flex justify-content-center mt-5">
+            <div style="width: 60%;">
+                <input type="hidden" name="poll-id" value="{{poll.id}}" />
+                <input type="hidden" name="poll-title" value="{{poll.poll_title}}" />
+                <textarea hidden name="poll-content">
+                    {{#each poll.poll_options as |option|}}
+            {{option.name}}:{{option.count}}
+                    {{/each}}
+                </textarea>
+                <canvas id="chart"></canvas>
+            </div>
+        </div>
+    {{/if}}
 
-<div style="width:70%; margin:0px auto">
-    <input type="hidden" name="poll-id" value="{{poll.id}}" />
-    <input type="hidden" name="poll-title" value="{{poll.poll_title}}" />
-    <textarea hidden name="poll-content">
-        {{#each poll.poll_options as |option|}}
-{{option.name}}:{{option.count}}
-        {{/each}}
-    </textarea>
-    <canvas id="chart"></canvas>
-</div>
+
+    
 </section>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="/js/poll.js"></script>
-<script src="/js/vote.js"></script>
+{{#if userCanVote}}
+    <script src="/js/vote.js"></script>
+{{else}}
+    
+    <script src="/js/poll.js"></script>
+{{/if}}
+<script src="/js/copy-code.js"></script>

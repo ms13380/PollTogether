@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="/css/style.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
@@ -37,13 +37,11 @@
   <main>
 
     <div class="search-container">
-      {{!-- <form class="w-form" id="poll-search"> --}}
         <input type="search" class="poll-search m-1" name="query" placeholder="Search…" id="search">
         <button id="submit-search" class="btn btn-primary m-1 custom-button">Find Poll</button>
         <button class="btn btn-primary m-1 custom-button" onclick="location.href='/create'">Create Poll</a>
-      {{!-- </form> --}}
     </div>
-    <section class="album py-5 bg-light">
+    <section class="album bg-light">
       {{{body}}}
     </section>
   </main>
