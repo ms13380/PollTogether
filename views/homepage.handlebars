@@ -1,11 +1,9 @@
-<section>
+<div class="container">
+  <div class="row">
     {{#each polls as |poll|}}
-      <div class="w-layout-grid grid">
-        <div id="w-node-c5d79c06-3e91-8b7c-8009-5a2d5424fd5f-d7591f67" class="w-container">
         {{> poll-card poll}}
-        </div>
-        </div>
     {{/each}}
-</section>
+  </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="/js/poll-cards.js"></script>

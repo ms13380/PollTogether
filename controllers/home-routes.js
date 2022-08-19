@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Poll, User, Answer } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
@@ -112,9 +113,17 @@ router.get('/poll/:id', async (req, res) => {
   }
 });
 
-router.get('/create', async (req, res) => {
+router.get('/create', withAuth, async (req, res) => {
   try {
       res.render('create-poll', {loggedIn: req.session.loggedIn});
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
+router.get('/about-us', withAuth, async (req, res) => {
+  try {
+      res.render('about-us', {loggedIn: req.session.loggedIn});
   } catch (err) {
       res.status(500).json(err);
   }

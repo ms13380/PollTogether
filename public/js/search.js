@@ -17,4 +17,4 @@ const searchPolls = async (event) => {
   }
 };
 
-document.querySelector('#poll-search').addEventListener('submit', searchPolls);
+document.querySelector('#submit-search').addEventListener('click', searchPolls);
