@@ -16,5 +16,11 @@ module.exports = {
   },
   format_content: (text) => {
     return text.replace(/(?:\r\n|\r|\n)/g, '<br>');
+  },
+  desc_preview: (text) => {
+    if (text.length > 200) {
+      return text.slice(0, 200).trim() + '...';
+    }
+    return text;
   }
 };
