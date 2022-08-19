@@ -29,6 +29,22 @@ for (let option of pollValues) {
       indexAxis: 'y',
       plugins: {
         legend: {display: false},
+      },
+      scales: {
+        x: {
+            grid: {
+                display:false
+            },
+            ticks: {
+              beginAtZero: true,
+              callback: function(value) {if (value % 1 === 0) {return value;}}
+            }
+        },
+        y: {
+            grid: {
+                // display:false
+            }   
+        }
       }
     }
   };

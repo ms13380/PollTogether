@@ -21,7 +21,7 @@ router.post('/', withAuth, async (req, res) => {
 router.put('/:id', withAuth, async (req, res) => {
     try {
         const data = await Poll.update({
-            poll_desc: req.body.poll_content
+            poll_desc: req.body.poll_desc
         },
         {
             where: {

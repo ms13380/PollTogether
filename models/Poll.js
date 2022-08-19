@@ -23,7 +23,7 @@ Polls.init(
     },
 
     poll_desc: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: true
     },
 
