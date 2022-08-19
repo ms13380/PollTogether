@@ -7,10 +7,10 @@
         </header>
         <section class="poll-card-desc">
                 <div>
-                    <span id="desc_field">
-                    {{poll_desc}}
+                    <span class="desc_field">
+                        {{poll_desc}}
                     </span>
-                    <a href = "#" class = "desc_edit"> Edit Description </a>
+                    <a href="#" class="desc_edit">Edit Description</a>
                     <canvas id="chart-{{id}}"></canvas>
                     <div style="display:none">
                         <input type="hidden" name="poll-id" value="{{id}}" />
@@ -21,7 +21,7 @@
                             {{/each}}
                         </textarea>
                     </div>
-                    <span style="color:dodgerblue; font-weight:bold;">Click here to vote!</span>
+                    <a href="/poll/{{id}}" class="blue-link">Click here to vote!</a>
                 </div>
         </section>
 

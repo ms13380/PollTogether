@@ -2,46 +2,62 @@ const pollEdit = async (event) => {
   
     event.preventDefault();
 
-
-
     const edit = event.target;
 
-    if(edit.className == "desc_edit"){
-
-
-
-      //const new_desc = edit.parentNode;
-
-      // const poll_id = document.querySelector('input[name="id"]').value;
-
+    if (edit.className == "desc_edit") {
       let textField = $("<textarea>");
+      textField.attr('class', 'w-100');
+      textField.attr('style', 'height: 160px');
+      let parentDiv = edit.closest('div');
+      let spanEl = parentDiv.childNodes[1];
+      let aEl = parentDiv.childNodes[3];
+      let spanText = spanEl.textContent.trim();
+      textField.val(spanText);
+      let jParent = $(parentDiv);
 
-      let descTargetJ = $(event.target);
+      let saveButton = $('<button>');
+      saveButton.attr('class', 'save-desc btn btn-primary mx-1');
+      saveButton.text('Save');
+      jParent.prepend(saveButton);
 
-      let descTarget = descTargetJ.parent();
-      
-      let oldDesc = descTarget.first().text();
+      let cancelButton = $('<button>');
+      cancelButton.attr('class', 'cancel-desc btn btn-secondary mx-1');
+      cancelButton.text('Cancel');
+      jParent.prepend(cancelButton);
 
-      textField.val(oldDesc);
+      spanEl.classList.add('hidden');
+      aEl.classList.add('hidden');
+      jParent.prepend(textField);
+    } else if (edit.classList.contains('save-desc')) {
+      let parentDiv = edit.closest('div');
+      let textAreaEl = parentDiv.childNodes[0];
+      let descText = textAreaEl.value.trim();
+      const pollID = document.querySelector('input[name="poll-id"]').value;
+      const response = await fetch(`/api/polls/${pollID}`, {
+        method: 'PUT',
+        body: JSON.stringify({ id: pollID, poll_desc: descText }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+      if (response.ok) {
+        document.location.reload();
+      } else {
+        alert('An error occured.');
+      }
+    } else if (edit.classList.contains('cancel-desc')) {
+      let parentDiv = edit.closest('div');
+      let textAreaEl = parentDiv.childNodes[0];
+      let saveEl = parentDiv.childNodes[1];
+      let cancelEl = parentDiv.childNodes[2];
 
-      descTarget.remove(descTarget.first());
-      
-      descTarget.prepend(textField);
+      parentDiv.removeChild(textAreaEl);
+      parentDiv.removeChild(saveEl);
+      parentDiv.removeChild(cancelEl);
 
-      // if (poll_desc) {
-      //   const response = await fetch(`/api/home-routes/${poll_id}`, {
-      //     method: 'PUT',
-      //     body: JSON.stringify({ poll_desc }),
-      //     headers: { 'Content-Type': 'application/json' },
-      //   });
-    
-      //   if (response.ok) {
-      //     document.location.replace(`/post/${poll_id}`);
-      //   } else {
-      //     alert('An error occured.');
-      //   }
-      // }
+      let spanEl = parentDiv.childNodes[1];
+      let aEl = parentDiv.childNodes[3];
+      spanEl.classList.remove('hidden');
+      aEl.classList.remove('hidden');
     }
   };
 
-  document.querySelector('#cardEvent').addEventListener('click', pollEdit);
+document.querySelector('#cardEvent').addEventListener('click', pollEdit);
