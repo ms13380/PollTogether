@@ -39,7 +39,8 @@ Polls.init(
 
     poll_expire: {
       type: DataTypes.DATE,
-      allowNull: true
+      allowNull: true,
+      defaultValue: null
    }
     
   },

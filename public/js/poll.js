@@ -25,7 +25,12 @@ for (let option of pollValues) {
   const config = {
     type: 'bar',
     data: data,
-    options: {indexAxis: 'y'}
+    options: {
+      indexAxis: 'y',
+      plugins: {
+        legend: {display: false},
+      }
+    }
   };
 
   const myChart = new Chart(

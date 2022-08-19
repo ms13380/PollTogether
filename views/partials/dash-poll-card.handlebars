@@ -1,25 +1,29 @@
-<section class="poll-card">
-    <header class="poll-card-header">
-        <div><a href="/poll/{{id}}">{{poll_title}}</a></div>
-        <div>by <a href="#">{{user.username}}</a></div> {{!-- Need user profile link here --}}
-        <button type="button">Edit Poll</button>
-    </header>
-    <section class="poll-card-desc">
-        <a href="/poll/{{id}}">
-            <div>
-                {{poll_desc}}
-                <canvas id="chart-{{id}}"></canvas>
-                <div style="display:none">
-                    <input type="hidden" name="poll-id" value="{{id}}" />
-                    <input type="hidden" name="poll-title" value="{{poll_title}}" />
-                    <textarea hidden name="poll-content">
-                        {{#each poll_options as |option|}}
+<section class="col-md-4">
+    <div class="card mb-4 box-shadow">
+        <header class="poll-card-header bg-dark text-light">
+            <div><a href="/poll/{{id}}">{{poll_title}}</a></div>
+            <div>by <a href="#">{{user.username}}</a></div> {{!-- Need user profile link here --}}
+            
+        </header>
+        <section class="poll-card-desc">
+                <div>
+                    <span id="desc_field">
+                    {{poll_desc}}
+                    </span>
+                    <a href = "#" class = "desc_edit"> Edit Description </a>
+                    <canvas id="chart-{{id}}"></canvas>
+                    <div style="display:none">
+                        <input type="hidden" name="poll-id" value="{{id}}" />
+                        <input type="hidden" name="poll-title" value="{{poll_title}}" />
+                        <textarea hidden name="poll-content">
+                            {{#each poll_options as |option|}}
 {{option.name}}:{{option.count}}
-                        {{/each}}
-                    </textarea>
+                            {{/each}}
+                        </textarea>
+                    </div>
+                    <span style="color:dodgerblue; font-weight:bold;">Click here to vote!</span>
                 </div>
-                <span style="color:coral; font-weight:bold;">Click here to vote!</span>
-            </div>
-        </a>
-    </section>
+        </section>
+
+    </div>
 </section>

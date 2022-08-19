@@ -1,29 +1,44 @@
-<section>
-    <header>
+<section class="container">
+    <header class="py-5 text-center">
         <h2>Create Poll</h2>
+        <p class="lead p5">This is some sample text</p>
     </header>
-    <section class="create-poll">
-        <form id="create-form">
-            <section>
-                <input name="poll-title" placeholder="Title" required />
+    <form id="create-form">
+        <section class="row">
+            <section class="col-md-4 order-md-1">
+                <h4 class="mb-3">Details</h4>
+                <div class="mb-3">
+                    <label for="poll-title">Title</label>
+                    <input name="poll-title" class="form-control" placeholder="Title" required />
+                </div>
+                <div class="mb-3">
+                    <label for="poll-desc">Description</label>
+                    <textarea name="poll-desc" class="form-control" placeholder="Description"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="poll-exp">Poll End Time <span class="optional">*optional</span></label>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col-md-5 mb-3">
+                        <input type="datetime-local" class="form-control" name="poll-exp">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <button type="submit" class="btn btn-primary custom-button" id="submit-post">Create</button>
+                    </div>
+                </div>
             </section>
-            <section>
-                <textarea name="poll-desc" placeholder="Description"></textarea>
+            <section class="col-md-4 order-md-2">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">Answer choices</h4>
+                <ul id="poll-options" class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed p-0"><input class="poll-option" placeholder="Answer choice 1" required /></li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed p-0"><input class="poll-option" placeholder="Answer choice 2" required /></li>
+                </ul>
+                <div class="mb-3">
+                    <a href="#" id="add-option">Add option</a>
+                </div>
             </section>
-            <section>
-                <a href="#" id="add-option">Add option</a>
-            </section>
-            <section id="poll-options">
-                Answer choices:
-                <div><input type="date" name="poll-exp" required></div>
-                <div><input style="display: block;" class="poll-option" required /></div>
-                <div><input style="display: block;" class="poll-option" required /></div>
-            </section>
-            <section>
-                <button type="submit" id="submit-post">Create</button>
-            </section>
-        </form>
-    </section>
+        </section>
+    </form>
 </section>
 
 <script src="/js/create-poll.js"></script>

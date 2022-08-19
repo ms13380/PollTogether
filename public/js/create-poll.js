@@ -17,7 +17,13 @@ const pollFormHandler = async (event) => {
   
     const poll_title = document.querySelector('input[name="poll-title"]').value.trim();
     const poll_desc = document.querySelector('textarea[name="poll-desc"]').value.trim();
-    const poll_expire = document.querySelector('input[name="poll-exp"]').value.trim();
+    let poll_expire = document.querySelector('input[name="poll-exp"]').value.trim();
+    if (poll_expire == '') {
+      poll_expire = null;
+    } else {
+      poll_expire = new Date(poll_expire);
+      poll_expire = poll_expire.toUTCString();
+    }
 
     const optionsSection = $('#poll-options');
 
@@ -44,13 +50,12 @@ const pollFormHandler = async (event) => {
 
 const addOptionToPoll = async (event) => {
     let optionsSection = $('#poll-options');
-    let newRow = $('<div>');
+    let newRow = $('<li>');
+    newRow.attr('class', 'list-group-item d-flex justify-content-between lh-condensed p-0 align-middle');
     let newOption = $('<input>');
     newOption.attr('class', 'poll-option');
-    // newOption.attr('style', 'display:block');
     newOption.attr('required', true);
     newRow.append(newOption);
-    // optionsSection.append(newOption);
 
     let removeOptionLink = $('<a>');
     removeOptionLink.attr('href', '#');
@@ -67,14 +72,6 @@ const removeOptionFromPoll = async (event) => {
   optionList.removeChild(event.target.parentNode);
   }
 }
-
-// optionsElement.on('click', function(event) {
-//   var clickedElement = $(event.target);
-//   if (clickedElement.hasClass('remove-option')) {
-//     let test = clickedElement.siblings()[0];
-//   }
-//   let test = clickedElement.siblings()[0];
-// });
 
 async function generateID(code) {
     let characterSelection = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

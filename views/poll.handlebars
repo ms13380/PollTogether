@@ -1,11 +1,24 @@
 <section>
 <h1>Poll: {{poll.poll_title}} - Made by: {{poll.user.username}}</h1>
 <h2>Share code: {{poll.id}}</h2>
+{{#if poll.poll_expire}}
+    <h3>Ends at: {{format_date poll.poll_expire}}</h3>
+{{/if}}
 <section>
     {{poll.poll_desc}}
 </section>
 
+{{#if userCanVote}}
+<div>
+    {{#each poll.poll_options as |option|}}
+        <input type="radio" name="vote" value="{{option.name}}" /> {{option.name}}<br>
+    {{/each}}
+    <button id="vote">Vote</button>
+</div>
+{{/if}}
+
 <div style="width:50%; margin:0px auto">
+    <input type="hidden" name="poll-id" value="{{poll.id}}" />
     <input type="hidden" name="poll-title" value="{{poll.poll_title}}" />
     <textarea hidden name="poll-content">
         {{#each poll.poll_options as |option|}}
@@ -17,3 +30,4 @@
 </section>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="/js/poll.js"></script>
+<script src="/js/vote.js"></script>
