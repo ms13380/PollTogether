@@ -55,6 +55,7 @@ const addOptionToPoll = async (event) => {
     let newOption = $('<input>');
     newOption.attr('class', 'poll-option');
     newOption.attr('required', true);
+    newOption.attr('maxlength', '70');
     newRow.append(newOption);
 
     let removeOptionLink = $('<a>');

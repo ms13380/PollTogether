@@ -9,11 +9,11 @@
                 <h4 class="mb-3">Details</h4>
                 <div class="mb-3">
                     <label for="poll-title">Title</label>
-                    <input name="poll-title" class="form-control" placeholder="Title" required />
+                    <input name="poll-title" class="form-control" placeholder="Title" maxlength="255" required />
                 </div>
                 <div class="mb-3">
                     <label for="poll-desc">Description</label>
-                    <textarea name="poll-desc" class="form-control" placeholder="Description"></textarea>
+                    <textarea name="poll-desc" class="form-control" placeholder="Description" maxlength="65535"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="poll-exp">Poll End Time <span class="optional">*optional</span></label>
@@ -30,8 +30,12 @@
             <section class="col-md-4 order-md-2">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">Answer choices</h4>
                 <ul id="poll-options" class="list-group mb-3">
-                    <li class="list-group-item d-flex justify-content-between lh-condensed p-0"><input class="poll-option" placeholder="Answer choice 1" required /></li>
-                    <li class="list-group-item d-flex justify-content-between lh-condensed p-0"><input class="poll-option" placeholder="Answer choice 2" required /></li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed p-0">
+                        <input class="poll-option" placeholder="Answer choice 1" maxlength="70" required />
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed p-0">
+                        <input class="poll-option" placeholder="Answer choice 2" maxlength="70" required />
+                    </li>
                 </ul>
                 <div class="mb-3">
                     <a href="#" id="add-option">Add option</a>
