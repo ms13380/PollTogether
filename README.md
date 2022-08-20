@@ -15,6 +15,7 @@ AS A bootcamp instructor or for anyone who cares easily create a poll, PollToget
 THE QUESTION is, "Together or together?" 
 The SOLUTION is PollTogether 👍
 ```
+![image](https://user-images.githubusercontent.com/103905661/185743118-751bf828-f95e-4e09-8ab9-a10704058d2c.png)
 
 ## Acceptance Criteria
 
