@@ -8,11 +8,11 @@ Heroku: https://poll-together.herokuapp.com/
 ## User Story
 
 ```md
-Our inspiration was simple - how can you gauge how people are thinking or what do they want to do?
+Our inspiration was simple - A fun way, accurate, and user-friendly way to get your "Fist-of-Five"
+HOW can you gauge what your students are thinking or what do they want to do?
 AS A bootcamp instructor or for anyone who cares easily create a poll, PollTogether is here for you!
-For a bootcamp instructor with many students how do you know INSTANTLY that they understand the material?
-How do you know that everyone is following along?
-What is a fast, accurate, and reliable way I can take a poll of if we want to work together...or together
+
+The question is, "Together or together?" The answer is PollTogether
 ```
 
 ## Acceptance Criteria
