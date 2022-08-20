@@ -8,11 +8,11 @@ Heroku: https://poll-together.herokuapp.com/
 ## User Story
 
 ```md
-Our inspiration was simple - A fun way, accurate, and user-friendly way to get your "Fist-of-Five"
-HOW can you gauge what your students are thinking or what do they want to do?
+OUR INSPIRATION was simple - To CREATE a fun way, accurate, and user-friendly way to get your "Fist-of-Five"
+HOW can you gauge what your students are thinking or what do they want to do? 🤔
 AS A bootcamp instructor or for anyone who cares easily create a poll, PollTogether is here for you!
 
-The question is, "Together or together?" The answer is PollTogether
+THE QUESTION is, "Together or together?" The answer is PollTogether 👍
 ```
 
 ## Acceptance Criteria
