@@ -121,7 +121,7 @@ router.get('/create', withAuth, async (req, res) => {
   }
 });
 
-router.get('/about-us', withAuth, async (req, res) => {
+router.get('/about-us', async (req, res) => {
   try {
       res.render('about-us', {loggedIn: req.session.loggedIn});
   } catch (err) {
