@@ -8,9 +8,9 @@ Heroku: https://poll-together.herokuapp.com/
 ## How PollTogether Came to Be
 
 ```md
-OUR INSPIRATION was simple - To CREATE a fun way, accurate, and graphically-appealing way to get your "Fist-of-Five"!
+OUR INSPIRATION was simple - To CREATE an easy, fun, and graphical way to get your "Fist-of-Five"!
 IT SOLVES - HOW can you gauge what your students are thinking or what do they want to do instantly? 🤔
-AS A bootcamp instructor or for anyone who cares easily create a poll, PollTogether is here for you!
+AS A bootcamp instructor, or for anyone who cares to easily create a poll, PollTogether is here for you!
 
 THE QUESTION is, "Together or together?" 
 The SOLUTION is PollTogether 👍
@@ -20,20 +20,21 @@ The SOLUTION is PollTogether 👍
 ## How-To: Polling made fun and easy
 
 ```md
+
 WHEN you first visit our site you're given 6 examples of polls
 REGISTER to start your journey - Upper Right hand corner, middle option, click to register 
 LOGIN the fun begins. ❤️ Once you login current page will now show the most recent polls
 CLICK TO SEARCH Now you're in the driver seat. Find past polls you've conducted to see the results or use the polls again
 BUTTONS of creative fun. 😀 We've made creating a poll easy. 
-You'll be presented options for:
-   WHAT you want to take a poll on
+YOUR CHOICE OF:
+   WHAT you want to take a poll on. Create exactly what you will be taking a poll on
    WHO can take the poll
    WHAT options of answers your users can have
 SHARE your poll. Your users will now have a poll's ID that you shared with them so they can answer
-NO FIST-OF-TEN We've got you covered because we coded it in such a way that your user can only answer once per their credentials
-THEN an answer is recorded in the database
+NO FIST-OF-TEN ✊✊❌ We've got you covered because we coded it in such a way that your user can only answer once per their credentials
+THEN an answer is recorded in the database 💽
 SEE the results. 📊 Once the polling is comnplete, you now have a graphical representation of what your users chose
-THEN I see the polls I have created, and the option to log out
+
 
 ```
 ### Technology Utilized
