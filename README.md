@@ -22,11 +22,15 @@ The SOLUTION is PollTogether 👍
 ```md
 WHEN you first visit our site you're given 6 examples of polls
 REGISTER to start your journey - Upper Right hand corner, middle option, click to register 
-ONCE your LOGGED IN the fun begins. The current page will now show the most recent polls
-CHOOSE to use your recent polls, search for your past polls, or create your own poll
-THEN I am taken to the homepage
-WHEN I choose to sign up
-THEN I am prompted to create a username and password
+LOGIN the fun begins. Once you login current page will now show the most recent polls
+CLICK TO SEARCH Now you're in the driver seat. Find past polls you've conducted to see the results or use the polls again
+BUTTONS of creative fun. We've made creating a poll easy. 
+You'll be presented options for:
+   WHAT you want to take a poll on
+   WHO can take the poll
+   WHAT options of answers your users can have
+NO FIST-OF-TEN In our code we created your user can only answer once per their credentials
+
 WHEN I click on the sign-up button
 THEN my user credentials are saved and I am logged into the site
 WHEN I revisit the site at a later time and choose to sign in
