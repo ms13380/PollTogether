@@ -27,7 +27,6 @@
                                         <input type="radio" id="option-{{option.index}}" name="vote" value="{{option.name}}" style="display:none" />{{option.name}}
                                     </li>
                                 </label>
-                                
                             {{/each}}
                             <button id="vote-button" class="btn btn-secondary mt-2" type="button">Vote</button>
                         </ul>
@@ -36,7 +35,7 @@
             </div>
         </div>
     {{else}}
-        <div class="d-flex justify-content-center mt-5">
+        <div class="d-flex justify-content-center mt-5 pb-5">
             <div style="width: 60%;">
                 <input type="hidden" name="poll-id" value="{{poll.id}}" />
                 <input type="hidden" name="poll-title" value="{{poll.poll_title}}" />
@@ -45,11 +44,10 @@
             {{option.name}}:{{option.count}}
                     {{/each}}
                 </textarea>
-                <canvas id="chart"></canvas>
+                <canvas id="chart" height="{{chart_size poll.poll_options}}"></canvas>
             </div>
         </div>
     {{/if}}
-
 
     
 </section>

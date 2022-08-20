@@ -22,5 +22,8 @@ module.exports = {
       return text.slice(0, 200).trim() + '...';
     }
     return text;
+  },
+  chart_size: (optionsList) => {
+    return (optionsList.length * 20) + 'px'
   }
 };
