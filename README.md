@@ -29,22 +29,22 @@ You'll be presented options for:
    WHAT you want to take a poll on
    WHO can take the poll
    WHAT options of answers your users can have
-NO FIST-OF-TEN In our code we created your user can only answer once per their credentials
-
-WHEN I click on the sign-up button
-THEN my user credentials are saved and I am logged into the site
-WHEN I revisit the site at a later time and choose to sign in
-THEN I am prompted to enter my username and password
-WHEN I am signed in to the site
-THEN I see the polls I have created, and the option to log out
-WHEN I click on the homepage option in the navigation
-THEN I am taken to the homepage and presented with existing polls I have created
-WHEN I click on an existing poll I have created
-THEN I am presented with the results of the poll
-WHEN I type a poll's id into the search bar, it brings up the poll's page.
-WHEN I click on an answer choice
+SHARE your poll. Your users will now have a poll's ID that you shared with them so they can answer
+NO FIST-OF-TEN We've got you covered because we coded it in such a way that your user can only answer once per their credentials
 THEN an answer is recorded in the database
+SEE the results. Once the polling is comnplete, you now have a graphical representation of what your users chose
+THEN I see the polls I have created, and the option to log out
+
 ```
+### Technology Utilized
+
+```md
+
+Bootstrap
+JS
+
+```
+
 
 ### Database Models
 
