@@ -34,28 +34,28 @@
                 </div>
             </div>
         </div>
-    {{else}}
-        <div class="d-flex justify-content-center mt-5 pb-5">
-            <div style="width: 60%;">
-                <input type="hidden" name="poll-id" value="{{poll.id}}" />
-                <input type="hidden" name="poll-title" value="{{poll.poll_title}}" />
-                <textarea hidden name="poll-content">
-                    {{#each poll.poll_options as |option|}}
-            {{option.name}}:{{option.count}}
-                    {{/each}}
-                </textarea>
-                <canvas id="chart" height="{{chart_size poll.poll_options}}"></canvas>
-            </div>
-        </div>
     {{/if}}
+    <h3 class="mx-auto text-center">Results</h3>
+    <div class="d-flex justify-content-center mt-2 pb-5">
+        
+        <div style="width: 60%;">
+            <input type="hidden" name="poll-id" value="{{poll.id}}" />
+            <input type="hidden" name="poll-title" value="{{poll.poll_title}}" />
+            <textarea hidden name="poll-content">
+                {{#each poll.poll_options as |option|}}
+        {{option.name}}:{{option.count}}
+                {{/each}}
+            </textarea>
+            <canvas id="chart" height="{{chart_size poll.poll_options}}"></canvas>
+        </div>
+    </div>
+    
 
     
 </section>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 {{#if userCanVote}}
     <script src="/js/vote.js"></script>
-{{else}}
-    
-    <script src="/js/poll.js"></script>
 {{/if}}
+<script src="/js/poll.js"></script>
 <script src="/js/copy-code.js"></script>

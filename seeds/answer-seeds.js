@@ -2,92 +2,172 @@ const { Answer } = require('../models');
 
 const pollData = [
   {
-    poll_id: "ABC123",
+    poll_id: "F49K0S",
     user_id: 2,
-    option: "Option 1"
+    option: "1"
   },
   {
-    poll_id: "ABC123",
+    poll_id: "F49K0S",
     user_id: 3,
-    option: "Option 1"
+    option: "2"
   },
   {
-    poll_id: "ABC123",
+    poll_id: "F49K0S",
     user_id: 4,
-    option: "Option 2"
+    option: "2"
   },
   {
-    poll_id: "ABC123",
+    poll_id: "F49K0S",
     user_id: 5,
-    option: "Option 4"
+    option: "3"
   },
   {
-    poll_id: "ABC123",
+    poll_id: "F49K0S",
     user_id: 6,
-    option: "Option 4"
+    option: "3"
   },
   {
-    poll_id: "ABC123",
+    poll_id: "F49K0S",
     user_id: 7,
-    option: "Option 3"
+    option: "4"
   },
   {
-    poll_id: "ABC123",
+    poll_id: "F49K0S",
     user_id: 8,
-    option: "Option 1"
+    option: "4"
   },
   {
-    poll_id: "ABC123",
+    poll_id: "F49K0S",
     user_id: 9,
-    option: "Option 2"
+    option: "4"
   },
   {
-    poll_id: "ABC123",
+    poll_id: "F49K0S",
     user_id: 10,
-    option: "Option 2"
+    option: "5"
   },
   {
-    poll_id: "ABC123",
+    poll_id: "F49K0S",
     user_id: 11,
-    option: "Option 1"
+    option: "5"
+  },
+  {
+    poll_id: "F49K0S",
+    user_id: 12,
+    option: "5"
+  },
+  {
+    poll_id: "F49K0S",
+    user_id: 13,
+    option: "5"
+  },
+  {
+    poll_id: "F49K0S",
+    user_id: 14,
+    option: "5"
+  },
+  {
+    poll_id: "F49K0S",
+    user_id: 15,
+    option: "5"
+  },
+  {
+    poll_id: "F49K0S",
+    user_id: 16,
+    option: "5"
+  },
+  {
+    poll_id: "F49K0S",
+    user_id: 17,
+    option: "5"
   },
 
   ////////////////////////
 
   {
-    poll_id: "987CBA",
+    poll_id: "97CQAB",
     user_id: 1,
-    option: "Blue"
+    option: "East Coast"
   },
   {
-    poll_id: "987CBA",
+    poll_id: "97CQAB",
+    user_id: 2,
+    option: "East Coast"
+  },
+  {
+    poll_id: "97CQAB",
     user_id: 3,
-    option: "Purple"
+    option: "East Coast"
   },
   {
-    poll_id: "987CBA",
+    poll_id: "97CQAB",
+    user_id: 4,
+    option: "East Coast"
+  },
+  {
+    poll_id: "97CQAB",
     user_id: 5,
-    option: "Red"
+    option: "East Coast"
   },
   {
-    poll_id: "987CBA",
+    poll_id: "97CQAB",
     user_id: 6,
-    option: "Blue"
+    option: "East Coast"
   },
   {
-    poll_id: "987CBA",
+    poll_id: "97CQAB",
     user_id: 7,
-    option: "Red"
+    option: "East Coast"
   },
   {
-    poll_id: "987CBA",
+    poll_id: "97CQAB",
+    user_id: 8,
+    option: "West Coast"
+  },
+  {
+    poll_id: "97CQAB",
+    user_id: 9,
+    option: "West Coast"
+  },
+  {
+    poll_id: "97CQAB",
     user_id: 10,
-    option: "Green"
+    option: "Central (No Coast)"
   },
   {
-    poll_id: "987CBA",
+    poll_id: "97CQAB",
     user_id: 11,
-    option: "Red"
+    option: "Central (No Coast)"
+  },
+  {
+    poll_id: "97CQAB",
+    user_id: 12,
+    option: "West Coast"
+  },
+  {
+    poll_id: "97CQAB",
+    user_id: 13,
+    option: "West Coast"
+  },
+  {
+    poll_id: "97CQAB",
+    user_id: 14,
+    option: "West Coast"
+  },
+  {
+    poll_id: "97CQAB",
+    user_id: 15,
+    option: "West Coast"
+  },
+  {
+    poll_id: "97CQAB",
+    user_id: 16,
+    option: "West Coast"
+  },
+  {
+    poll_id: "97CQAB",
+    user_id: 17,
+    option: "Central (No Coast)"
   },
 
   ////////////////////////
@@ -194,6 +274,202 @@ const pollData = [
     poll_id: "T4JG51",
     user_id: 11,
     option: "Yes"
+  },
+  {
+    poll_id: "T4JG51",
+    user_id: 12,
+    option: "Yes"
+  },
+  {
+    poll_id: "T4JG51",
+    user_id: 13,
+    option: "Yes"
+  },
+  {
+    poll_id: "T4JG51",
+    user_id: 14,
+    option: "Yes"
+  },
+  {
+    poll_id: "T4JG51",
+    user_id: 15,
+    option: "Yes"
+  },
+  {
+    poll_id: "T4JG51",
+    user_id: 16,
+    option: "Yes"
+  },
+  {
+    poll_id: "T4JG51",
+    user_id: 17,
+    option: "No"
+  },
+
+  ////////////////////////////
+
+  {
+    poll_id: "43R09Z",
+    user_id: 1,
+    option: "Python"
+  },
+  {
+    poll_id: "43R09Z",
+    user_id: 2,
+    option: "Javascript"
+  },
+  {
+    poll_id: "43R09Z",
+    user_id: 3,
+    option: "Javascript"
+  },
+  {
+    poll_id: "43R09Z",
+    user_id: 4,
+    option: "Javascript"
+  },
+  {
+    poll_id: "43R09Z",
+    user_id: 5,
+    option: "Javascript"
+  },
+  {
+    poll_id: "43R09Z",
+    user_id: 6,
+    option: "Javascript"
+  },
+  {
+    poll_id: "43R09Z",
+    user_id: 7,
+    option: "Java"
+  },
+  {
+    poll_id: "43R09Z",
+    user_id: 8,
+    option: "Java"
+  },
+  {
+    poll_id: "43R09Z",
+    user_id: 9,
+    option: "C#"
+  },
+  {
+    poll_id: "43R09Z",
+    user_id: 10,
+    option: "C#"
+  },
+  {
+    poll_id: "43R09Z",
+    user_id: 11,
+    option: "Go"
+  },
+  {
+    poll_id: "43R09Z",
+    user_id: 12,
+    option: "R"
+  },
+  {
+    poll_id: "43R09Z",
+    user_id: 13,
+    option: "R"
+  },
+  {
+    poll_id: "43R09Z",
+    user_id: 14,
+    option: "Swift"
+  },
+  {
+    poll_id: "43R09Z",
+    user_id: 15,
+    option: "PHP"
+  },
+  {
+    poll_id: "43R09Z",
+    user_id: 16,
+    option: "C"
+  },
+  {
+    poll_id: "43R09Z",
+    user_id: 17,
+    option: "C++"
+  },
+
+  ////////////////////////////
+
+  {
+    poll_id: "Y6RFY1",
+    user_id: 1,
+    option: "Blue"
+  },
+  {
+    poll_id: "Y6RFY1",
+    user_id: 2,
+    option: "Red"
+  },
+  {
+    poll_id: "Y6RFY1",
+    user_id: 3,
+    option: "Red"
+  },
+  {
+    poll_id: "Y6RFY1",
+    user_id: 4,
+    option: "Red"
+  },
+  {
+    poll_id: "Y6RFY1",
+    user_id: 5,
+    option: "Red"
+  },
+  {
+    poll_id: "Y6RFY1",
+    user_id: 6,
+    option: "Red"
+  },
+  {
+    poll_id: "Y6RFY1",
+    user_id: 7,
+    option: "Orange"
+  },
+  {
+    poll_id: "Y6RFY1",
+    user_id: 8,
+    option: "Orange"
+  },
+  {
+    poll_id: "Y6RFY1",
+    user_id: 9,
+    option: "Yellow"
+  },
+  {
+    poll_id: "Y6RFY1",
+    user_id: 10,
+    option: "Blue"
+  },
+  {
+    poll_id: "Y6RFY1",
+    user_id: 11,
+    option: "Blue"
+  },
+  {
+    poll_id: "Y6RFY1",
+    user_id: 12,
+    option: "Blue"
+  },
+  {
+    poll_id: "Y6RFY1",
+    user_id: 13,
+    option: "Green"
+  },
+  {
+    poll_id: "Y6RFY1",
+    user_id: 14,
+    option: "Green"
+  },
+  {
+    poll_id: "Y6RFY1",
+    user_id: 15,
+    option: "Brown"
   }
 ];
 
