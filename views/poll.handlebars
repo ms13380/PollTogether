@@ -1,7 +1,7 @@
 <section>
     <div class="px-3 pt-md-2 pb-md-4 mx-auto text-center">
         <h1 class="display-4">{{poll.poll_title}}</h1>
-        <h2>By {{poll.user.username}}</h2>
+        <h2>By <a href="/user/{{poll.user_id}}">{{poll.user.username}}</a></h2>
         {{#if poll.poll_expire}}
             <h3>Ends at: {{format_date poll.poll_expire}}</h3>
         {{/if}}
