@@ -1,0 +1,183 @@
+.main-header {
+  width: 100%;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a, .navbar a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding: 0px 10px;
+}
+
+.title {
+  font-size: 30px;
+  padding: 10px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.main-header a:link, .main-header a:hover, .main-header a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+#share-code {
+  width: 180px;
+  height: 50px;
+  text-align: center;
+}
+
+.copy-button {
+  font-size: 30px;
+  height: 50px;
+  padding-top: 2px;
+  padding-bottom: 18px;
+  margin-bottom: 7px;
+  margin-left: -1px;
+  outline: 1px solid #BBB;
+  border-radius: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#create-form textarea {
+  min-height: 200px;
+}
+
+.answers a {
+  text-decoration: none;
+  font-weight: bold;
+  color: dodgerblue;
+}
+
+.search-container {
+  margin: 0px auto;
+  /* width: 750px; */
+  width: 40%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.poll-search {
+  width:65%;
+  height: 50px;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.custom-button {
+  height: 48px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 75%;
+  margin: 0px auto;
+  background-color: #EEE;
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.poll-card {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 600px;
+  margin: 10px auto;
+}
+
+.poll-card-desc a:link, .poll-card-desc a:visited {
+  text-decoration: none;
+  font-weight: bold;
+  color: dodgerblue;
+}
+
+.poll-card-desc {
+  padding: 10px;
+}
+
+.poll-card-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.blue-link {
+  color: dodgerblue;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.poll-card-header a, .poll-card-header a:hover {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.poll-option {
+  height: 100%;
+  width: 75%;
+  border: none;
+  font-size: 20px;
+  padding: 8px;
+}
+
+.remove-option {
+  padding: 8px 12px;
+}
+
+.optional {
+  font-style: italic;
+  color: #AAA;
+  font-weight: lighter;
+}
+
+.hidden {
+  display: none;
+}
+
+.radio-section {
+  border: 1px solid;
+  overflow: auto;
+}
+
+.radio-section input[type='radio'] { 
+  transform: scale(1.5); 
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+.radio-wrapper {
+  cursor: pointer;
+}
+
+.radio-checked {
+  background-color: dodgerblue !important;
+  color: white !important;
+}
+
+.radio-unchecked {
+  background-color: white !important;
+  color: black !important;
+}
+
+.team-card {
+  padding: 20px;
+  background-color: #EEF0F1;
+  width: 250px;
+  height: 280px;
+}

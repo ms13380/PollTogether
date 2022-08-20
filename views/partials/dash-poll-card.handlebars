@@ -1,0 +1,29 @@
+<section class="col-md-4">
+    <div class="card mb-4 box-shadow">
+        <header class="poll-card-header bg-dark text-light">
+            <div><a href="/poll/{{id}}">{{poll_title}}</a></div>
+            <div>by <a href="/user/{{user_id}}">{{user.username}}</a></div>
+            
+        </header>
+        <section class="poll-card-desc">
+                <div>
+                    <span class="desc_field">
+                        {{desc_preview poll_desc}}
+                    </span>
+                    <a href="#" class="desc_edit">Edit Description</a>
+                    <canvas id="chart-{{id}}"></canvas>
+                    <div style="display:none">
+                        <input type="hidden" name="poll-id" value="{{id}}" />
+                        <input type="hidden" name="poll-title" value="{{poll_title}}" />
+                        <textarea hidden name="poll-content">
+                            {{#each poll_options as |option|}}
+{{option.name}}:{{option.count}}
+                            {{/each}}
+                        </textarea>
+                    </div>
+                    <a href="/poll/{{id}}" class="blue-link">Click here to vote!</a>
+                </div>
+        </section>
+
+    </div>
+</section>

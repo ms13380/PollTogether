@@ -1,0 +1,51 @@
+<section class="container">
+    <header class="py-5 text-center">
+        <h2>Create Poll</h2>
+    </header>
+    <form id="create-form">
+        <section class="row d-flex justify-content-center">
+            <section class="col-md-4 order-md-1">
+                <h4 class="mb-3">Details</h4>
+                <div class="mb-3">
+                    <label for="poll-title">Title</label>
+                    <input name="poll-title" class="form-control" placeholder="Title" maxlength="255" required />
+                </div>
+                <div class="mb-3">
+                    <label for="poll-desc">Description</label>
+                    <textarea name="poll-desc" class="form-control" placeholder="Description" maxlength="65535"></textarea>
+                </div>
+                <div>
+                    <label for="poll-exp">Poll End Time <span class="optional">(optional)</span></label>
+                </div>
+                    <div class="col-md-5 mb-3">
+                        <input type="datetime-local" class="form-control" name="poll-exp">
+                    </div>
+            </section>
+            <section class="col-md-4 order-md-2 answers">
+                <div class="container mb-4">
+                    <div class="row">
+                        <div class="col d-flex justify-content-start align-items-center">
+                            <h4>Answer choices</h4>
+                        </div>
+                        <div class="col d-flex justify-content-end align-items-center">
+                            <a href="#" id="add-option">Add option</a>
+                        </div>
+                    </div>
+                </div>
+                <ul id="poll-options" class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed p-0">
+                        <input class="poll-option" placeholder="Answer choice 1" maxlength="70" required />
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed p-0">
+                        <input class="poll-option" placeholder="Answer choice 2" maxlength="70" required />
+                    </li>
+                </ul>
+                <div class="mb-3 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary w-75 custom-button" id="submit-post">Create</button>
+                </div>
+            </section>
+        </section>
+    </form>
+</section>
+
+<script src="/js/create-poll.js"></script>
