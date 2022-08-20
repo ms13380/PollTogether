@@ -40,19 +40,15 @@ SEE the results. 📊 Once the polling is comnplete, you now have a graphical re
 
 ```md
 
-API's
+Javascript
+NODE.JS
 Bootstrap
-CSS
 Express
 Handlebars
-HTML
-Javascript
-JS
-MVC
-NODE.JS
-Obj Oriented
-ORM
 SQL
+Sequelize
+Chart.js
+jQuery
 
 ```
 
