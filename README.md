@@ -1,8 +1,7 @@
 # PollTogether
 Together or together? For THAT is the question
-### https://ms13380.github.io/PollTogether/
-=======
-Heroku: https://poll-together.herokuapp.com/
+### https://poll-together.herokuapp.com/
+
 ## Made by the Polars
 
 ## How PollTogether Came to Be
@@ -124,6 +123,12 @@ Your database should contain the following four models, including the requiremen
   
     * References the `User` model's `id`.
 
+  * `poll_expire`
+  
+    * Date.
+  
+    * Allow null values.
+
 * `Answer`
 
   * `poll_id`
@@ -142,8 +147,6 @@ Your database should contain the following four models, including the requiremen
 
 
 ### Associations
-
-You'll need to execute association methods on your Sequelize models to create the following relationships between them:
 
 * `Poll` belongs to `User`, and `User` has many `Poll` models.
 
