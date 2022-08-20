@@ -8,8 +8,8 @@ Heroku: https://poll-together.herokuapp.com/
 ## User Story
 
 ```md
-AS A bootcam teacher
-I WANT to be able to get input from my students
+AS A bootcamp teacher or for anyone who cares to create a poll, PollTogether is here for you
+
 SO THAT I can make sure that everyone understands and is participating
 ```
 
