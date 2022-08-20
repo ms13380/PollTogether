@@ -5,14 +5,15 @@ Together or together? For THAT is the question
 Heroku: https://poll-together.herokuapp.com/
 ## Made by the Polars
 
-## User Story
+## How PollTogether Came to Be
 
 ```md
-OUR INSPIRATION was simple - To CREATE a fun way, accurate, and user-friendly way to get your "Fist-of-Five"
-HOW can you gauge what your students are thinking or what do they want to do? 🤔
+OUR INSPIRATION was simple - To CREATE a fun way, accurate, and graphically-appealing way to get your "Fist-of-Five"!
+IT SOLVES - HOW can you gauge what your students are thinking or what do they want to do instantly? 🤔
 AS A bootcamp instructor or for anyone who cares easily create a poll, PollTogether is here for you!
 
-THE QUESTION is, "Together or together?" The answer is PollTogether 👍
+THE QUESTION is, "Together or together?" 
+The SOLUTION is PollTogether 👍
 ```
 
 ## Acceptance Criteria
