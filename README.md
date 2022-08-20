@@ -17,13 +17,13 @@ The SOLUTION is PollTogether 👍
 ```
 ![image](https://user-images.githubusercontent.com/103905661/185743118-751bf828-f95e-4e09-8ab9-a10704058d2c.png)
 
-## Acceptance Criteria
+## How-To: Polling made fun and easy
 
 ```md
-GIVEN a polling site
-WHEN I visit the site for the first time
-THEN I am presented with the homepage, which allows me to search for a poll and allows me to log in
-WHEN I click on the homepage option
+WHEN you first visit our site you're given 6 examples of polls
+REGISTER to start your journey - Upper Right hand corner, middle option, click to register 
+ONCE your LOGGED IN the fun begins. The current page will now show the most recent polls
+CHOOSE to use your recent polls, search for your past polls, or create your own poll
 THEN I am taken to the homepage
 WHEN I choose to sign up
 THEN I am prompted to create a username and password
