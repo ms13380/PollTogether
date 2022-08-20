@@ -2,12 +2,12 @@ const router = require('express').Router();
 const { Poll, User, Answer } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
     try {
       const pollData = await Poll.findAll({
           attributes: ['id', 'poll_title', 'poll_desc', 'poll_options', 'user_id', 'created_at'],
           where:{
-            user_id: req.session.user_id
+            user_id: req.params.id
           },
           include: [
               {
@@ -20,7 +20,7 @@ router.get('/', withAuth, async (req, res) => {
               },
               {
                   model: User,
-                  attributes: ['id', 'username']
+                  attributes: ['username']
               }
           ],
           order: [['created_at', 'DESC']],
@@ -38,11 +38,11 @@ router.get('/', withAuth, async (req, res) => {
         }
       }
 
-      const user = await User.findByPk(req.session.user_id, {
-        attributes: ['username']
-    });
+      const user = await User.findByPk(req.params.id, {
+        attributes: ['id', 'username']
+      });
 
-      res.render('dashboard', {polls, loggedIn: req.session.loggedIn, user_name: user.username});
+      res.render('user-page', {polls, loggedIn: req.session.loggedIn, user_name: user.username});
     } catch (err) {
       console.log(err);
       res.status(500).json(err);

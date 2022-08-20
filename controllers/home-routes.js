@@ -33,7 +33,7 @@ router.get('/', async (req, res) => {
               },
               {
                   model: User,
-                  attributes: ['username']
+                  attributes: ['id', 'username']
               }
           ],
           order: [['created_at', 'DESC']],
@@ -78,7 +78,7 @@ router.get('/poll/:id', async (req, res) => {
         },
         {
           model: User,
-          attributes: ['username']
+          attributes: ['id', 'username']
         }
       ]
     });

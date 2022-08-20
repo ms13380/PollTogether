@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row" id="cardEvent">
-    <h2>My Polls</h2>
+    <h2>{{possessive_grammar user_name}} Polls</h2>
     {{#if polls}}
       {{#each polls as |poll|}}
-          {{> dash-poll-card poll}}
+          {{> poll-card poll}}
       {{/each}}
     {{else}}
       <p>Your polls will appear here.</p>
