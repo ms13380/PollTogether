@@ -55,7 +55,37 @@ const userData = [
     username: 'Ruth_Conley',
     email: 'ruth.c@example.com',
     password: 'test.pass11'
-  }
+  },
+  {
+    username: 'Sidney.Montoya',
+    email: 'sidney.m@example.com',
+    password: 'test.pass12'
+  },
+  {
+    username: 'Tegan_Richards',
+    email: 'tegan.r@example.com',
+    password: 'test.pass13'
+  },
+  {
+    username: 'Gary Barajas',
+    email: 'gary.b@example.com',
+    password: 'test.pass14'
+  },
+  {
+    username: 'Reece Campbell',
+    email: 'reece.c@example.com',
+    password: 'test.pass15'
+  },
+  {
+    username: 'Michelle.Friedman',
+    email: 'michelle.f@example.com',
+    password: 'test.pass16'
+  },
+  {
+    username: 'Maddison-Diaz',
+    email: 'maddison.d@example.com',
+    password: 'test.pass17'
+  },
 ];
 
 const seedUsers = () => User.bulkCreate(userData, {individualHooks: true});
